@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 
 # Load YOLO model
-yolo_weights = 'yolov7-tiny.weights'
-yolo_config = 'yolov7-tiny.cfg'
+yolo_weights = 'yolov3.weights'
+yolo_config = 'yolov3.cfg'
 yolo_classes = 'coco.names'
 
 net = cv2.dnn.readNet(yolo_weights, yolo_config)
@@ -13,7 +13,7 @@ with open(yolo_classes, 'r') as f:
     classes = f.read().strip().split('\n')
 
 # Open a video capture object (0 represents the default camera)
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0) ----------> # You can replace this number with video
 
 while True:
     # Read a frame from the video capture
