@@ -13,7 +13,7 @@ with open(yolo_classes, 'r') as f:
     classes = f.read().strip().split('\n')
 
 # Read an image
-image = cv2.imread('2.jpg')
+image = cv2.imread('<IMAGE NAME>')  -------> # Replace with the image name
 
 # Get image dimensions
 height, width, _ = image.shape
